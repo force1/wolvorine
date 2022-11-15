@@ -23,24 +23,36 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Step 1 - log the pre build space
+        run : df
+      
+      - name: Step 2 - checkout the main github  branch
+        uses : actions/checkout@V2
+        
+      - name: Step 3 - setup jdk 1.0
+        uses : actions/setup-java@1
+        
+      - name: step 4 - Build Maven
+        run: echo  mvn - B package --file pom.xml
+        
+      - name: Step 5 - Selenium Tests
         run: |
-          echo  What is in this directory ?
-          ls -a
-          echo
-          echo Is java installed ?
-          java --version
-          echo
-          echo Is git installed ?
+          echo $SELENIUM_JAR_PATH
+          
+      - name: Step 6 - Log build tool versions
+        run: |
           git --version
-          echo  what about build tools ?
           mvn --version
           gradle --version
+          
+        
+           
+        
+        
+        
+        
+        
+      
+
+      
           
