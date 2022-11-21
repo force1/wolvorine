@@ -28,7 +28,7 @@ jobs:
       # EMAIL NOTIFICATION
       - name: Send Email
         if: always()
-        uses: wolvorine/action-send-mail@v2
+        uses: dawidd6/action-send-mail@v2
         with:
            # mail server settings
            server_address: smtp.gmail.com
