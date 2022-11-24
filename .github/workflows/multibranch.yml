@@ -17,10 +17,10 @@ jobs:
           target_branch: Release
           github_token: ${{ github.token }}
 
-      - name: Merge Release -> main
+      - name: Merge Release -> Releasedemo
         uses: devmasx/merge-branch@master
         with:
           type: now
           from_branch: develop
-          target_branch: main
+          target_branch: Releasedemo
           github_token: ${{ github.token }}
