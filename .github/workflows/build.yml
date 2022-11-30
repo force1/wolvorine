@@ -1,4 +1,4 @@
-name: Build Steps
+name: Build Stages
 
 # Controls when the workflow will run
 on:
