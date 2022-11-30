@@ -38,8 +38,6 @@ jobs:
           SHA: ${{ env.SHA }}
       - name: Branch name
         run: echo running on branch ${GITHUB_REF##*/} 
-      - name: Setting Prefix
-      - uses: trstringer/require-label-prefix@v1
-        id: Bril
+      
 
 
