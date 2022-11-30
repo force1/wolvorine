@@ -37,7 +37,7 @@ jobs:
         env: 
           SHA: ${{ env.SHA }}
        
-      - name: Extract branch name
+      - name: Extract branch 
         shell: bash
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         id: extract_branch
