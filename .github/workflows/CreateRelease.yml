@@ -88,4 +88,4 @@ jobs:
           pr_title: ${{ steps.create-release.outputs.branch_name }}
           pr_body: ${{ env.main_pr_body }}
 
-Co
+
